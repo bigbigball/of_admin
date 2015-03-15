@@ -33,12 +33,12 @@ body {
         <ul class="MM">
           <li><a href="<?php echo site_url().'/apply/appTip/appTipList'; ?>" target="main">留学资讯</a></li>
           <li><a href="<?php echo site_url().'/apply/appEvaluation/appEvaluationList'; ?>" target="main">留学评估</a></li>
-          <li><a href="<?php echo site_url().'/apply/appCountry/appUSA'; ?>" target="main">美国留学</a></li>
-          <li><a href="<?php echo site_url().'/apply/appCountry/appUK'; ?>" target="main">英国留学</a></li>
-          <li><a href="<?php echo site_url().'/apply/appCountry/appHK'; ?>" target="main">香港留学</a></li>
-          <li><a href="<?php echo site_url().'/apply/appCountry/appAUS'; ?>" target="main">澳洲留学</a></li>
-          <li><a href="<?php echo site_url().'/apply/appCountry/appSingapore'; ?>" target="main">新加坡留学</a></li>
           
+          <li><a href="<?php echo site_url().'/apply/appCountry/appKcountry/usa'; ?>" target="main">美国留学</a></li>
+          <li><a href="<?php echo site_url().'/apply/appCountry/appKcountry/uk'; ?>" target="main">英国留学</a></li>
+          <li><a href="<?php echo site_url().'/apply/appCountry/appKcountry/hk'; ?>" target="main">香港留学</a></li>
+          <li><a href="<?php echo site_url().'/apply/appCountry/appKcountry/aus'; ?>" target="main">澳洲留学</a></li>
+          <li><a href="<?php echo site_url().'/apply/appCountry/appKcountry/singapore'; ?>" target="main">新加坡留学</a></li>   
         </ul>
       </div>
       <h1 class="type"><a href="javascript:void(0)">文书写作管理</a></h1>

@@ -70,7 +70,43 @@ body {
 			<tr>
 				<td valign="middle"
 					background="<?php echo base_url().'style/' ?>images/main_leftbg.gif">&nbsp;</td>
-				<td valign="top" bgcolor="#F7F8F9"></td>
+				<td valign="top" bgcolor="#F7F8F9">
+				   <div id="button" class="mt10"> <!-- add div -->
+					  <input type="text" name="title" class="input-text lh30" size="40">					
+					  <input type="button" name="button" class="btn btn82 btn_search fs" value="查询">
+					  <a href="<?php echo site_url().'/apply/appCountry/addCountry/hk'; ?>">
+					    <input type="button" name="button" class="btn btn82 btn_add fs" value="新增">
+					  </a> 
+				    </div>
+				    
+				    <div id="table" class="mt10">
+						<div class="box span10 oh">
+							<table width="100%" border="0" cellpadding="0" cellspacing="0"
+								class="list_table fs">
+								<tr>
+									<th width="50"><input type="checkbox"></th>
+									<th width="300">文章标题</th>
+									<th width="100">发布人</th>
+									<th width="180">发表时间</th>
+									<th>操作</th>
+								</tr>
+								<?php foreach ($appcountry_list as $v): ?>
+								<tr class="tr">
+									<td class="td_center"><input type="checkbox"></td>
+									<td class="td_center"><a href="<?php echo site_url().'/apply/appCountry/editCountry/'.$v['id'].'/hk' ?>"><?php echo $v['title']?></a></td>
+									<td class="td_center"><?php echo $v['author']?></td>
+									<td class="td_center"><?php echo  date("Y-m-d H:i:s", $v['ctime'])?></td>
+									<td class="td_center">
+									【<a class="link-update" href="<?php echo site_url().'/apply/appCountry/editCountry/'.$v['id'].'/hk' ?>">修改</a>】
+									&nbsp;&nbsp;&nbsp;&nbsp;
+										【<a class="link-del" href="<?php echo site_url().'/apply/appCountry/delCountry/'.$v['id'].'/hk' ?>">删除</a>】
+									</td>
+								</tr>
+								<?php endforeach; ?>
+							</table>
+						</div>
+					</div>
+				</td>
 				<td
 					background="<?php echo base_url().'style/' ?>images/main_rightbg.gif">&nbsp;</td>
 			</tr>
