@@ -40,7 +40,7 @@ $config = array(
 		array(
 			'field' => 'desc',
 			'label' => '摘要',
-			'rules' => 'required|max_length[110]',
+			'rules' => 'required|max_length[200]',
 			),
 		array(
 			'field' => 'content',
@@ -87,7 +87,7 @@ $config = array(
 		array(
 			'field' => 'desc',
 			'label' => '摘要',
-			'rules' => 'required|max_length[110]',
+			'rules' => 'required|max_length[200]',
 			),
 		array(
 			'field' => 'content',
