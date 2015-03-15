@@ -40,7 +40,7 @@ $config = array(
 		array(
 			'field' => 'desc',
 			'label' => '摘要',
-			'rules' => 'required|max_length[200]',
+			'rules' => 'required|max_length[10]',
 			),
 		array(
 			'field' => 'content',
@@ -87,7 +87,7 @@ $config = array(
 		array(
 			'field' => 'desc',
 			'label' => '摘要',
-			'rules' => 'required|max_length[200]',
+			'rules' => 'required|max_length[10]',
 			),
 		array(
 			'field' => 'content',
@@ -120,5 +120,23 @@ $config = array(
 						'rules' => 'required',
 				),
 		
-		),
+	),
+		
+	'apply_country' => array( //添加国家留学检测
+			array(
+					'field' => 'title',
+					'label' => '标题',
+					'rules' => 'required|min_length[5]',
+			),
+			array(
+					'field' => 'author',
+					'label' => '发布人',
+					'rules' => 'required',
+			),
+			array(
+					'field' => 'content',
+					'label' => '内容',
+					'rules' => 'required',
+			),
+	),
 );
