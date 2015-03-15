@@ -7,7 +7,7 @@ class EassyExa extends MY_Controller{
 	 */
 	public function __construct() {
 		parent::__construct ();
-		$this->load->model ( 'eassyExa_model', 'eassy' );
+		$this->load->model ( 'eassyexa_model', 'eassy' );
 	}
 	
 	public function addExa(){

@@ -7,7 +7,7 @@ class AppTip extends MY_Controller {
 	 */
 	public function __construct() {
 		parent::__construct ();
-		$this->load->model ( 'appTip_model', 'app' );
+		$this->load->model ( 'apptip_model', 'app' );
 	}
 	public function addTip() {
 		$this->load->helper ( 'form' );

@@ -8,7 +8,7 @@ class EassyTip extends MY_Controller {
 	 */
 	public function __construct() {
 		parent::__construct ();
-		$this->load->model ( 'eassyTip_model', 'eassy' );
+		$this->load->model ( 'eassytip_model', 'eassy' );
 	}
 	public function addTip() {
 		$this->load->helper ( 'form' );
