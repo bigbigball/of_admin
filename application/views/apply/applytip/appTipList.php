@@ -1,3 +1,4 @@
+ <?php date_default_timezone_set("PRC"); ?>
 <body>
 	<link href="<?php echo base_url().'style/' ?>css/main.css"
 		rel="stylesheet" type="text/css">
@@ -95,7 +96,7 @@
 									<td class="td_center"><?php echo $v['author']?></td>
 									<td class="td_center"><?php echo $v['type']?></td>
 									<td class="td_center"><?php echo $v['status']?></td>
-									<td class="td_center"><?php echo $v['ctime']?></td>
+									<td class="td_center"><?php echo date('m-d-y', $v['ctime'])?></td>
 									<td class="td_center">
 									【<a class="link-update" href="<?php echo site_url().'/apply/appTip/editTip/'.$v['id'] ?>">修改</a>】
 									&nbsp;&nbsp;&nbsp;&nbsp;

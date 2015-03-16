@@ -28,7 +28,7 @@ body {
 	src="<?php echo base_url().'style/' ?>js/common.js"></script>
 
 
-
+ <?php date_default_timezone_set("PRC"); ?>
 
 <body>
 	<link href="<?php echo base_url().'style/' ?>css/main.css"

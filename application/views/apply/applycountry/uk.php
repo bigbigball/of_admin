@@ -27,7 +27,7 @@ body {
 <script type="text/javascript"
 	src="<?php echo base_url().'style/' ?>js/common.js"></script>
 
-
+ <?php date_default_timezone_set("PRC"); ?>
 
 
 <body>

@@ -1,4 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+ <?php date_default_timezone_set("PRC"); ?>
 <body>
 	<link href="<?php echo base_url().'style/' ?>css/main.css"
 		rel="stylesheet" type="text/css">
