@@ -66,7 +66,7 @@ body {
           </tr>
         </table>
         <ul class="MM">
-		  <li><a href="http://www.mycodes.net" target="main">申请案例</a></li>
+		  <li><a href="<?php echo site_url().'/apply/applyExa/applyExaList'; ?>" target="main">申请案例</a></li>
           <li><a href="http://www.mycodes.net" target="main">留学案例</a></li>
           <li></li>
           <li></li>

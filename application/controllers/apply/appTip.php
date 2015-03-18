@@ -16,6 +16,32 @@ class AppTip extends MY_Controller {
 	
 	// 显示留学申请资讯列表
 	public function appTipList() {
+	    
+	    //后台设置后缀为空，否则分页出错
+	    $this->config->set_item('url_suffix', '');
+	    //载入分页类
+	    $this->load->library('pagination');
+	    //每页显示数量
+	    $perPage = 4;
+	    
+	    //配置项设置
+	    //controller的url
+	    $config['base_url'] = site_url('apply/appTip/appTipList');
+	    $config['total_rows'] = $this->db->count_all_results('applytip');
+	    $config['per_page'] = $perPage;
+	    $config['uri_segment'] = 4;
+	    $config['first_link'] = '首页';
+	    $config['prev_link'] = '上一页';
+	    $config['next_link'] = '下一页';
+	    $config['last_link'] = '尾页';
+	    
+	    $this->pagination->initialize($config);
+	    
+	    $data['links'] = $this->pagination->create_links();
+	    //p($data);die;
+	    $offset = $this->uri->segment(4);
+	    $this->db->limit($perPage, $offset);
+	    
 		$data ['applytip'] = $this->app->appTipList ();
 		$this->load->view ( 'apply/applytip/appTipList', $data );
 	}

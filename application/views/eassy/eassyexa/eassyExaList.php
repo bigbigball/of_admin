@@ -138,7 +138,7 @@
 
 							</div>
 						</div>
-					</div> <wx:data></wx:data>
+					</div> 
 				</td>
 				<td
 					background="<?php echo base_url().'style/' ?>images/main_rightbg.gif">&nbsp;</td>

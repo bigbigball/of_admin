@@ -33,7 +33,23 @@
 	align: center;
 }
 </style>
+<style>
+.page {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 12px;
+}
 
+.page a {
+	margin-left: 2px;
+	border: 1px solid #ccc;
+	padding: 3px 7px 3px 7px;
+	background: url('<?php echo base_url().' style/ ' ?>images/bottom_bg.png')
+		0px 0px;
+	color: #08c;
+}
+</style>
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 		<tbody>
 			<tr>
@@ -107,21 +123,20 @@
 								
 
 							</table>
+							<div class="page">
+							   
+							
+							         <?php echo $links?>
+							      
+							  
+							</div>
+
 							<div class="page mt10 fs">
-								<div class="pagination">
-									<ul>
-										<li class="first-child"><a href="#">首页</a></li>
-										<li class="disabled"><span>上一页</span></li>
-										<li class="active"><span>1</span></li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">下一页</a></li>
-										<li class="last-child"><a href="#">末页</a></li>
-									</ul>
-								</div>
+								<div class="pagination"></div>
 
 							</div>
 						</div>
-					</div> <wx:data></wx:data>
+					</div> 
 				</td>
 				<td
 					background="<?php echo base_url().'style/' ?>images/main_rightbg.gif">&nbsp;</td>

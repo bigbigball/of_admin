@@ -9,6 +9,8 @@ class Appexa_model extends CI_Model{
 	}
 	//全部查询
 	public function appExaList(){
+	    //添加查询条件，降序
+	    $this->db->order_by('id','DESC');
 		$data = $this->db->get('apply')->result_array();
 		return $data;
 	}

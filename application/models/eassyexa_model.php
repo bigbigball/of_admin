@@ -9,6 +9,8 @@ class Eassyexa_model extends CI_Model{
 	}
 	//全部查询
 	public function eassyExaList(){
+	    //添加查询条件，降序
+	    $this->db->order_by('id','DESC');
 		$data = $this->db->get('eassy')->result_array();
 		return $data;
 	}
