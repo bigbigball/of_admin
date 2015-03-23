@@ -139,4 +139,27 @@ $config = array(
 					'rules' => 'required',
 			),
 	),
+		'contact' => array(
+				array(
+						'field' => 'title',
+						'label' => '主题',
+						'rules' => 'required',
+				),
+				array(
+						'field' => 'email',
+						'label' => 'email',
+						'rules' => 'required|valid_email',
+				),
+				array(
+						'field' => 'mobile',
+						'label' => '电话',
+						'rules' => 'required',
+				),
+				array(
+						'field' => 'content',
+						'label' => '留言',
+						'rules' => 'required',
+				),
+		
+		),
 );

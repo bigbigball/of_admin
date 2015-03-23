@@ -85,7 +85,7 @@ body {
         </table>
         <ul class="MM">
           
-          <li><a href="http://www.mycodes.net" target="main">留言管理</a></li>
+          <li><a href="<?php echo site_url().'/about/feedback/feedbackList'; ?>" target="main">留言管理</a></li>
           <li></li>
           <li></li>
           <li></li>
