@@ -139,6 +139,28 @@ $config = array(
 					'rules' => 'required',
 			),
 	),
+		'appcase' => array(
+				array(
+						'field' => 'case_title',
+						'label' => '案例标题',
+						'rules' => 'required|min_length[5]',
+				),
+				array(
+						'field' => 'academy_name',
+						'label' => '申请学校',
+						'rules' => 'required|min_length[4]',
+				),
+				array(
+						'field' => 'author',
+						'label' => '发布人',
+						'rules' => 'required',
+				),
+				array(
+						'field' => 'case_content',
+						'label' => '案例正文',
+						'rules' => 'required',
+				),
+		),
 		'contact' => array(
 				array(
 						'field' => 'title',

@@ -20,6 +20,7 @@ class AppCountry extends MY_Controller {
 	}
 	*/
 	public function appKcountry() { //多国留学总控函数
+		error_log('aaaaa',3,'G:\CodeIgniter\oufuedu\log\log.txt');
 		$country = $this->uri->segment ( 4 );
 		$table = $country;
 		$data ['appcountry_list'] = $this->app->appCountryList ($table);
@@ -133,7 +134,6 @@ class AppCountry extends MY_Controller {
 	public function delCountry() {
 		$id = $this->uri->segment ( 4 );
 		$country = $this->uri->segment ( 5 );
-        //$table = "usa";
 		$this->app->delAppCountry ( $country, $id );
 		success ( 'apply/appCountry/appKcountry/'.$country, $this->country_eToc[$country].'留学资料删除成功！' );
 	}
