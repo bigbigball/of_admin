@@ -161,6 +161,13 @@ $config = array(
 						'rules' => 'required',
 				),
 		),
+		'appevaluation' => array(
+				array(
+						'field' => 'author',
+						'label' => '审核人',
+						'rules' => 'required',
+				),
+		),
 		'contact' => array(
 				array(
 						'field' => 'title',

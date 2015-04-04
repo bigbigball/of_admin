@@ -92,7 +92,7 @@ span{
 											<td class="">
 											<input type="hidden" name="id" value="<?php echo $evaluation[0]['id'] ?>"/>
 											<input type="text" name="eva_title"
-												class="input-text lh30" size="40"
+												class="input-text lh30" size="40" readonly="true"
 												value="<?php echo $evaluation[0]['username']." 申请留学 ".$evaluation[0]['outcountry']?>" />							
 											</td>
 									    </tr>
@@ -101,7 +101,7 @@ span{
 											<td class="td_right fs">留学国家：</td>
 											<td class="">
 
-											<input type="text" name="outcountry"
+											<input type="text" name="outcountry" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['outcountry'] ?>" />
 											</td>
 											<td></td>	
@@ -111,7 +111,7 @@ span{
 											<td class="td_right fs">留学专业：</td>
 											<td class="">
 
-											<input type="text" name="outmajor"
+											<input type="text" name="outmajor" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['outmajor'] ?>" />
 											</td>
 											<td></td>	
@@ -121,7 +121,7 @@ span{
 											<td class="td_right fs">备选国家：</td>
 											<td class="">
 
-											<input type="text" name="altcountry"
+											<input type="text" name="altcountry" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['altcountry'] ?>" />
 											</td>
 											<td></td>	
@@ -131,7 +131,7 @@ span{
 											<td class="td_right fs">出国时间：</td>
 											<td class="">
 
-											<input type="text" name="outtime"
+											<input type="text" name="outtime" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['outtime'] ?>" />
 											</td>
 											<td></td>	
@@ -141,7 +141,7 @@ span{
 											<td class="td_right fs">攻读学位：</td>
 											<td class="">
 
-											<input type="text" name="outdegree"
+											<input type="text" name="outdegree" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['outdegree'] ?>" />
 											</td>
 											<td></td>	
@@ -151,7 +151,7 @@ span{
 											<td class="td_right fs">就读院校：</td>
 											<td class="">
 
-											<input type="text" name="incollege"
+											<input type="text" name="incollege" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['incollege'] ?>" />
 											</td>
 											<td></td>	
@@ -161,7 +161,7 @@ span{
 											<td class="td_right fs">就读专业：</td>
 											<td class="">
 
-											<input type="text" name="inmajor"
+											<input type="text" name="inmajor" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['inmajor'] ?>" />
 											</td>
 											<td></td>	
@@ -171,7 +171,7 @@ span{
 											<td class="td_right fs">学校类型：</td>
 											<td class="">
 
-											<input type="text" name="ctype"
+											<input type="text" name="ctype" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['ctype'] ?>" />
 											</td>
 											<td></td>	
@@ -181,7 +181,7 @@ span{
 											<td class="td_right fs">平均成绩：</td>
 											<td class="">
 
-											<input type="text" name="gpa"
+											<input type="text" name="gpa" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['gpa'] ?>" />
 											</td>
 											<td></td>	
@@ -191,7 +191,7 @@ span{
 											<td class="td_right fs">外语成绩：</td>
 											<td class="">
 
-											<input type="text" name="egpa"
+											<input type="text" name="egpa" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['egpa'] ?>" />
 											</td>
 											<td></td>	
@@ -201,7 +201,7 @@ span{
 											<td class="td_right fs">姓名：</td>
 											<td class="">
 
-											<input type="text" name="username"
+											<input type="text" name="username" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['username'] ?>" />
 											</td>
 											<td></td>	
@@ -211,7 +211,7 @@ span{
 											<td class="td_right fs">性别：</td>
 											<td class="">
 
-											<input type="text" name="gender"
+											<input type="text" name="gender" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['gender'] ?>" />
 											</td>
 											<td></td>	
@@ -221,7 +221,7 @@ span{
 											<td class="td_right fs">最高学历：</td>
 											<td class="">
 
-											<input type="text" name="maxdegree"
+											<input type="text" name="maxdegree" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['maxdegree'] ?>" />
 											</td>
 											<td></td>	
@@ -231,7 +231,7 @@ span{
 											<td class="td_right fs">Email地址：</td>
 											<td class="">
 
-											<input type="text" name="email"
+											<input type="text" name="email" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['email'] ?>" />
 											</td>
 											<td></td>	
@@ -241,18 +241,18 @@ span{
 											<td class="td_right fs">手机号码：</td>
 											<td class="">
 
-											<input type="text" name="mobile"
+											<input type="text" name="mobile" readonly="true"
 												class="input-text lh30" size="40" value="<?php echo $evaluation[0]['mobile'] ?>" />
 											</td>
 											<td></td>	
 										</tr>
-										
+										 
 										<tr>
 									       <td class="td_right fs">审核结果：</td>
 									       <td class="fs">
-									       <input type="radio" name="status" value="0" <?php if(0==$evaluation[0]['status']) echo set_radio('status','0', TRUE); else echo set_radio('status','0')?>/> 未审核 &nbsp;&nbsp;
-									       <input type="radio" name="status" value="1" <?php if(1==$evaluation[0]['status']) echo set_radio('status','1', TRUE); else echo set_radio('status','1')?>/> 邮箱通知&nbsp;&nbsp;
-									       <input type="radio" name="status" value="2" <?php if(2==$evaluation[0]['status']) echo set_radio('status','2', TRUE); else echo set_radio('status','2')?>/> 电话通知&nbsp;&nbsp;
+									       <input type="radio" name="status" value="1" <?php if(0==$evaluation[0]['status'] || 1==$evaluation[0]['status']) echo set_radio('status','1', TRUE); else echo set_radio('status','1')?>/> 审核中 &nbsp;&nbsp;
+									       <input type="radio" name="status" value="2" <?php if(2==$evaluation[0]['status']) echo set_radio('status','2', TRUE); else echo set_radio('status','2')?>/> 已邮箱通知&nbsp;&nbsp;
+									       <input type="radio" name="status" value="3" <?php if(3==$evaluation[0]['status']) echo set_radio('status','3', TRUE); else echo set_radio('status','3')?>/> 已电话通知&nbsp;&nbsp;
 									       </td>
 								       </tr>
 								       

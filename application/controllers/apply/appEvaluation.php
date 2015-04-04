@@ -7,7 +7,7 @@ class AppEvaluation extends MY_Controller{
 	public function __construct() {
 		parent::__construct ();
 		$this->load->model ( 'appevaluate_model', 'eva' );
-		$this->status_nToc = array(0=>'未审核',1=>'已邮件通知',2=>'已电话通知');
+		$this->status_nToc = array(0=>'未审核',1=>'审核中',2=>'已邮件通知',3=>'已电话通知');
 		$this->outdegree_nToc = array(0=>'大学',1=>'硕士',2=>'博士');
 		$this->ctype_nToc = array(0=>'211大学',1=>'985大学',2=>'其他');
 		$this->gender_nToc = array(0=>'男',1=>'女');
@@ -35,7 +35,7 @@ class AppEvaluation extends MY_Controller{
 		$this->pagination->initialize($config);
 		
 		$data['links'] = $this->pagination->create_links();
-		//p($data);die;
+
 		$offset = $this->uri->segment(4);
 		$this->db->limit($perPage, $offset);
 		
@@ -58,14 +58,9 @@ class AppEvaluation extends MY_Controller{
 	//审核留学评估
 	public function editAppEvaluation(){
 		$id = $this->uri->segment ( 4 );
-	
 		$evaluation = $this->eva->checkAppEvaluationByID ( $id );
 		
-		//error($data['evaluation'][0]['status']);
-		
 		foreach($evaluation as &$v){ //编号转文本
-			if(empty($v['author'])) $v['author'] = "无";
-			$v['status'] = $this->status_nToc[$v['status']];
 			if(empty($v['utime']))
 				$v['utime'] = "无";
 			else
@@ -87,8 +82,7 @@ class AppEvaluation extends MY_Controller{
 		//载入表单验证类
 		$this->load->library('form_validation');
 		//执行验证
-		//$status = $this->form_validation->run('appcase');
-	    $status = true;
+		$status = $this->form_validation->run('appevaluation');
 		if($status){	
 			$id = $this->input->post ( 'id' );
 			// 操作model层
@@ -98,25 +92,37 @@ class AppEvaluation extends MY_Controller{
 					'utime' => time(),
 			);
 			$data ['evaluation'] = $this->eva->updateAppEvaluation ( $id, $data );
-			success ( 'apply/appEvaluation/appEvaluationList', '申请案例修改成功！' );
+			success ( 'apply/appEvaluation/appEvaluationList', '留学评估修改成功！' );
 		}else{
 			//重载
-			$data ['case'][] = array (
-					'status'=> $this->input->post ( 'status' ),
-					'author' => $this->input->post ( 'author' ),
-			);
-				
+			$id = $this->input->post ( 'id' );
+			
+			$evaluation = $this->eva->checkAppEvaluationByID ( $id );
+			
+			foreach($evaluation as &$v){ //编号转文本
+				if(empty($v['utime']))
+					$v['utime'] = "无";
+				else
+					$v['utime'] = date("Y-m-d", $v['utime']);
+				$v['outtime'] = date("Y-m-d", $v['outtime']);
+				$v['outdegree'] = $this->outdegree_nToc[$v['outdegree']];
+				$v['ctype'] = $this->ctype_nToc[$v['ctype']];
+				$v['gender'] = $this->gender_nToc[$v['gender']];
+				$v['maxdegree'] = $this->maxdegree_nToc[$v['maxdegree']];
+			}
+			
+			$data ['evaluation'] = $evaluation;
+			$data['evaluation'][0]['author'] = "";
+
 			$this->load->helper('form');
 			$this->load->view('apply/evaluation/editAppEvaluation', $data);
 		}
 	}
+	
 	// 删除留学评估
 	public function delAppEvaluation() {
 		$id = $this->uri->segment ( 4 );
 		$this->eva->delAppEvaluation ( $id );
 		success ( 'apply/appEvaluation/appEvaluationList', '评估资料删除成功！' );
-	}
-	
-	
-	
+	}	
 }
